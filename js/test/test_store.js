@@ -1,7 +1,12 @@
-const store = require('../store');
+const storejs = require('../store');
 const assert = require('chai').assert
 
+var store;
 describe('module', () => {
+    before(() => {
+        storejs().then((m) => { store = m;});
+    })
+
     it('default', () => {
         var v = store._retrieve_value();
         assert.equal(v, 42);
