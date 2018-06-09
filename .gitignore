@@ -1,2 +1,3 @@
 store
 *.swp
+**/node_modules
